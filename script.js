@@ -19,14 +19,10 @@ function compile() {
   };
 }
 
-
-
 function save() {
-    var html = document.getElementById("html");
-    saveText(html.value);
+  var html = document.getElementById("html");
+  saveText(html.value);
 }
-
-
 
 function saveText(text) {
   var data = new Blob([text], { type: "text/html" });
@@ -40,3 +36,28 @@ function saveText(text) {
 }
 
 compile();
+
+$(document).ready(function () {
+  $switch = true;
+  $("#switch").click(function () {
+    if ($switch) {
+      $("main").css("flex-direction", "column");
+      $("#editors").css({
+        "flex-direction": "row",
+        height: "40%",
+        width: "100%",
+      });
+      $("#display").css({ height: "60%", width: "99%" });
+      $switch = false;
+    } else {
+      $("main").css("flex-direction", "row");
+      $("#editors").css({
+        "flex-direction": "column",
+        height: "100%",
+        width: "30%",
+      });
+      $("#display").css({ height: "100%", width: "70%" });
+      $switch = true;
+    }
+  });
+});

@@ -4,14 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <textarea id="html" placeholder="HTML"></textarea>
-    <button onclick="save()">html</button>
-    <textarea id="css" placeholder="CSS"></textarea>
-    <textarea id="js" placeholder="JavaScript"></textarea>
-    <iframe id="code"></iframe>
+    <header>
+      <h2>CODE EDITOR</h2>
+      <div id="top_buttons">
+        <button>Save</button>
+        <button id="switch">Switch</button>
+      </div>
+    </header>
+    <main>
+      <div id="editors">
+        <div class="e_item">
+          <h3>HTML</h3>
+          <textarea id="html"></textarea>
+        </div>
+        <div class="e_item">
+          <h3>CSS</h3>
+          <textarea id="css"></textarea>
+        </div>
+        <div class="e_item">
+          <h3>JAVASCRIPT</h3>
+          <textarea id="js"></textarea>
+        </div>
+      </div>
+      <div id="display">
+        <h3>DISPLAY</h3>
+        <iframe id="code"></iframe>
+      </div>
+    </main>
+    <script type="text/javascript" src="jquery-3.5.1.js"></script>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
