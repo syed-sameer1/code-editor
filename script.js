@@ -19,18 +19,60 @@ function compile() {
   };
 }
 
-function save() {
+$("#p_save").click(function () {
   var html = document.getElementById("html");
-  saveText(html.value);
-}
+  var css = document.getElementById("css");
+  var js = document.getElementById("js");
 
-function saveText(text) {
+  if (
+    $("#c_html").is(":checked") ||
+    $("#c_css").is(":checked") ||
+    $("#c_js").is(":checked")
+  ) {
+    if ($("#c_html").is(":checked")) {
+      var htmlName = $("#i_html").val();
+      saveHtml(html.value, htmlName);
+    }
+    if ($("#c_css").is(":checked")) {
+      var cssName = $("#i_css").val();
+      saveCss(css.value, cssName);
+    }
+    if ($("#c_js").is(":checked")) {
+      var jsName = $("#i_js").val();
+      saveJs(js.value, jsName);
+    }
+  } else {
+    $("#error").css("display", "block");
+  }
+});
+
+function saveHtml(text, name) {
   var data = new Blob([text], { type: "text/html" });
   var textFile = window.URL.createObjectURL(data);
   var a = document.createElement("a");
   a.setAttribute("id", "download");
   a.setAttribute("href", textFile);
-  a.setAttribute("download", "index");
+  a.setAttribute("download", name);
+  a.click();
+  document.body.appendChild(a);
+}
+function saveCss(text, name) {
+  var data = new Blob([text], { type: "text/css" });
+  var textFile = window.URL.createObjectURL(data);
+  var a = document.createElement("a");
+  a.setAttribute("id", "download");
+  a.setAttribute("href", textFile);
+  a.setAttribute("download", name);
+  a.click();
+  document.body.appendChild(a);
+}
+function saveJs(text, name) {
+  var data = new Blob([text], { type: "text/js" });
+  var textFile = window.URL.createObjectURL(data);
+  var a = document.createElement("a");
+  a.setAttribute("id", "download");
+  a.setAttribute("href", textFile);
+  a.setAttribute("download", name + ".js");
   a.click();
   document.body.appendChild(a);
 }
@@ -59,5 +101,36 @@ $(document).ready(function () {
       $("#display").css({ height: "100%", width: "70%" });
       $switch = true;
     }
+  });
+
+  $("#c_html").change(function () {
+    if (this.checked) {
+      $("#name_html").css("display", "block");
+    } else if (!this.checked) {
+      $("#name_html").css("display", "none");
+    }
+  });
+
+  $("#c_css").change(function () {
+    if (this.checked) {
+      $("#name_css").css("display", "block");
+    } else if (!this.checked) {
+      $("#name_css").css("display", "none");
+    }
+  });
+
+  $("#c_js").change(function () {
+    if (this.checked) {
+      $("#name_js").css("display", "block");
+    } else if (!this.checked) {
+      $("#name_js").css("display", "none");
+    }
+  });
+
+  $("#save").click(function () {
+    $("#fade").css("display", "flex");
+  });
+  $("#p_cancel").click(function () {
+    $("#fade").css("display", "none");
   });
 });

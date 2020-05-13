@@ -10,7 +10,7 @@
     <header>
       <h2>CODE EDITOR</h2>
       <div id="top_buttons">
-        <button>Save</button>
+        <button id="save">Save</button>
         <button id="switch">Switch</button>
       </div>
     </header>
@@ -33,6 +33,51 @@
         <h3>DISPLAY</h3>
         <iframe id="code"></iframe>
       </div>
+      <section id="fade">
+        <div id="pop_up">
+          <div id="error"><p>Please checked one checkbox*</p></div>
+          <div id="checkboxes">
+            <label class="container"
+              >HTML
+              <input type="checkbox" name="c_html" id="c_html" />
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="container"
+              >CSS
+              <input type="checkbox" name="c_css" id="c_css" />
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="container"
+              >JS
+              <input type="checkbox" name="c_js" id="c_js" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div id="inputs">
+            <div id="name_html">
+              <input type="text" name="i_html" id="i_html" /><label for="i_html"
+                >.html</label
+              >
+            </div>
+            <div id="name_css">
+              <input type="text" name="i_css" id="i_css" /><label for="i_css"
+                >.css</label
+              >
+            </div>
+            <div id="name_js">
+              <input type="text" name="i_js" id="i_js" /><label for="i_js"
+                >.js</label
+              >
+            </div>
+          </div>
+          <div id="pop_up_buttons">
+            <button id="p_cancel">Cancel</button>
+            <button id="p_save">Save</button>
+          </div>
+        </div>
+      </section>
     </main>
     <script type="text/javascript" src="jquery-3.5.1.js"></script>
     <script type="text/javascript" src="script.js"></script>
