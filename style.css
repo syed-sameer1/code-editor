@@ -1,8 +1,13 @@
+/* comments in css body is hint its change through javascript */
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
+
+/* header */
+
 header {
   display: flex;
   align-items: center;
@@ -10,6 +15,11 @@ header {
   padding: 0 50px;
   height: 10vh;
 }
+
+/* header */
+
+/* main */
+
 main {
   display: flex;
   align-items: center;
@@ -17,71 +27,12 @@ main {
   flex-direction: row;
   /* flex-direction: column; */
   height: 85vh;
-  /* filter: blur(8px); */
 }
-#editors {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  /* flex-direction: row; */
-  height: 100%;
-  /* height: 40%; */
-  margin: 20px 0;
-  width: 30%;
-  /* width: 100%; */
-  margin: 5px;
-}
-.e_item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  margin: 5px 5px;
-  border: 4px solid black;
-  border-radius: 15px;
-  background-color: black;
-  color: white;
-  font-family: sans-serif;
-}
-.e_item h3 {
-  margin: 5px 0;
-}
-.e_item textarea {
-  width: 98%;
-  height: 90%;
-  border: none;
-  border-radius: 15px;
-  outline: none;
-  padding: 10px 2px;
-}
-#display {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 100%;
-  /* height: 60%; */
-  width: 70%;
-  /* width: 99%; */
-  border: 4px solid black;
-  border-radius: 15px;
-  background-color: black;
-  color: white;
-  margin: 5px;
-}
-#display h3 {
-  margin: 5px 0;
-}
-iframe {
-  height: 100%;
-  width: 100%;
-  border: none;
-  background-color: white;
-  border-radius: 15px;
-}
+
+/* main */
+
+/* all buttons */
+
 button {
   background-color: white;
   color: black;
@@ -97,6 +48,95 @@ button:hover {
   background-color: black;
   cursor: pointer;
 }
+
+/* all buttons */
+
+/* editor block */
+
+#editors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* flex-direction: row; */
+  height: 100%;
+  /* height: 40%; */
+  margin: 20px 0;
+  width: 30%;
+  /* width: 100%; */
+  margin: 5px;
+}
+
+/* individual item */
+.e_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin: 5px 5px;
+  border: 4px solid black;
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+}
+
+/* editors heading */
+.e_item h3 {
+  margin: 5px 0;
+}
+
+/* editor text area */
+.e_item textarea {
+  width: 98%;
+  height: 90%;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+  padding: 10px 2px;
+}
+
+/* editor block */
+
+/* display block */
+
+#display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  /* height: 60%; */
+  width: 70%;
+  /* width: 99%; */
+  border: 4px solid black;
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+  margin: 5px;
+}
+
+/* heading in display block */
+#display h3 {
+  margin: 5px 0;
+}
+
+/* main display */
+iframe {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background-color: white;
+  border-radius: 15px;
+}
+
+/* display block */
+
+/* pop_up block */
+
+/* black background */
 #fade {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.267);
@@ -106,6 +146,8 @@ button:hover {
   align-items: center;
   justify-content: center;
 }
+
+/* pop_up div */
 #pop_up {
   display: flex;
   align-items: center;
@@ -114,12 +156,14 @@ button:hover {
   border: 4px solid black;
   border-radius: 15px;
   width: 40%;
-  height: 60vh;
+  height: 70vh;
   /* position: fixed; */
   z-index: 2;
   background-color: white;
 }
-/* checkbox */
+
+/* checkboxes */
+
 #checkboxes {
   margin: 20px;
   display: flex;
@@ -195,6 +239,7 @@ button:hover {
 
 /* checkbox */
 
+/* main input */
 #inputs input {
   margin: 15px 5px;
   padding: 10px;
@@ -204,11 +249,15 @@ button:hover {
   font-size: 16px;
   /* display: none; */
 }
+
+/* input labels */
 #inputs label {
   color: #555;
   font-size: 18px;
   /* display: none; */
 }
+
+/* pop_up_buttons style for position */
 #pop_up_buttons {
   display: flex;
   align-items: center;
@@ -218,12 +267,18 @@ button:hover {
 #pop_up_buttons button {
   margin: 40px;
 }
+
+/* apply in javascript */
 #name_html,
 #name_css,
-#name_js{
+#name_js {
   display: none;
 }
-#error{
+
+/* error line */
+#error {
   color: red;
   display: none;
 }
+
+/* pop_up block */
