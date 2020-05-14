@@ -7,77 +7,108 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- header start -->
     <header>
       <h2>CODE EDITOR</h2>
       <div id="top_buttons">
+        <!-- open save popup -->
         <button id="save">Save</button>
+        <!-- button for switch display -->
         <button id="switch">Switch</button>
       </div>
     </header>
+    <!-- header end-->
     <main>
+      <!-- editor block start -->
       <div id="editors">
+        <!-- HTML code block start-->
         <div class="e_item">
           <h3>HTML</h3>
           <textarea id="html"></textarea>
         </div>
+        <!-- HTML code block end -->
+        <!-- CSS code block start -->
         <div class="e_item">
           <h3>CSS</h3>
           <textarea id="css"></textarea>
         </div>
+        <!-- CSS code block end -->
+        <!-- JS code block start -->
         <div class="e_item">
           <h3>JAVASCRIPT</h3>
           <textarea id="js"></textarea>
         </div>
+        <!-- JS code block end -->
       </div>
+      <!-- editor block end -->
+      <!-- code display block start -->
       <div id="display">
         <h3>DISPLAY</h3>
         <iframe id="code"></iframe>
       </div>
+      <!-- code display block end -->
+      <!-- pop_up block start -->
+      <!-- for black background -->
       <section id="fade">
         <div id="pop_up">
+          <!-- error line -->
           <div id="error"><p>Please checked one checkbox*</p></div>
+          <!-- checkboxes block start -->
+          <!-- checkboxes for select file for download-->
           <div id="checkboxes">
+            <!-- HTML checkbox -->
             <label class="container"
               >HTML
               <input type="checkbox" name="c_html" id="c_html" />
               <span class="checkmark"></span>
             </label>
-
+            <!-- CSS checkbox -->
             <label class="container"
               >CSS
               <input type="checkbox" name="c_css" id="c_css" />
               <span class="checkmark"></span>
             </label>
-
+            <!-- JS checkbox -->
             <label class="container"
               >JS
               <input type="checkbox" name="c_js" id="c_js" />
               <span class="checkmark"></span>
             </label>
           </div>
+          <!-- checkboxes block end -->
+          <!-- input block start -->
           <div id="inputs">
+            <!-- input for HTML -->
             <div id="name_html">
               <input type="text" name="i_html" id="i_html" /><label for="i_html"
                 >.html</label
               >
             </div>
+            <!-- input for CSS -->
             <div id="name_css">
               <input type="text" name="i_css" id="i_css" /><label for="i_css"
                 >.css</label
               >
             </div>
+            <!-- input for JS -->
             <div id="name_js">
               <input type="text" name="i_js" id="i_js" /><label for="i_js"
                 >.js</label
               >
             </div>
           </div>
+          <!-- input block end -->
+          <!-- pop_up buttons start -->
           <div id="pop_up_buttons">
+            <!-- cancel button for close pop_up -->
             <button id="p_cancel">Cancel</button>
+            <!-- save button for download files -->
             <button id="p_save">Save</button>
           </div>
+          <!-- pop_up buttons end -->
         </div>
       </section>
+      <!-- pop_up block end -->
     </main>
     <script type="text/javascript" src="jquery-3.5.1.js"></script>
     <script type="text/javascript" src="script.js"></script>
